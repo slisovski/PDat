@@ -1,0 +1,36 @@
+name: Update Wildlife Computers Data
+
+on:
+  schedule:
+    - cron: "0 */12 * * *"    # every 12 hours
+  workflow_dispatch: {}
+
+jobs:
+  update-wc-data:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.10"
+
+    - name: Install dependencies
+      run: pip install pandas requests pyarrow fastparquet
+
+    - name: Run WC Data Fetcher
+      env:
+        WC_ACCESS_KEY: ${{ secrets.WC_ACCESS_KEY }}
+        WC_SECRET_KEY: ${{ secrets.WC_SECRET_KEY }}
+      run: python scripts/fetch_wc_data.py
+
+    - name: Commit and push results
+      run: |
+        git config --global user.name "github-actions"
+        git config --global user.email "github-actions@github.com"
+        git add data/raw_wc data/processed_wc data/latest_wc
+        git commit -m "Auto-update WC Decoded Argos Data" || echo "No changes"
+        git push
