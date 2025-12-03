@@ -20,7 +20,7 @@ TAG_IDS = [
     "41619", "41624", "41620"
 ]
 
-API_BASE = "https://api.wildlifecomputers.com"
+API_BASE = "https://wcapi.wildlifecomputers.com"
 RAW = Path("data/raw_wc")
 PROC = Path("data/processed_wc")
 LATEST = Path("data/latest_wc")
@@ -57,7 +57,7 @@ def wc_headers(access_key, secret_key, method, url):
 # -----------------------------
 def fetch_decoded_argos(access_key, secret_key, device_id):
     method = "GET"
-    url = f"{API_BASE}/data/argos/decoded/{device_id}"
+    url = f"{API_BASE}/v1/data/argos/decoded/{device_id}"
 
     headers = wc_headers(access_key, secret_key, method, url)
     r = requests.get(url, headers=headers)
