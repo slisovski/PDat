@@ -1,0 +1,1281 @@
+[
+  {
+    "id": "68f5e8dac3d77b735bd570af",
+    "uuid": "1c000006e0",
+    "sn": "1c000006e0",
+    "device_type": 7168,
+    "hardware_version": 16977,
+    "firmware_version": 1008,
+    "fitting_version": 18,
+    "bootloader_version": 0,
+    "firmware_info": {
+      "version": 1008,
+      "code_hash": 95776692,
+      "build_time": 1760146066,
+      "bootloader_version": 1001
+    },
+    "updated_at": "2025-12-04T13:37:19.229Z",
+    "work_mode_timestamp": "2025-11-27T23:10:03Z",
+    "company_id": "654245cc40d27b238307331a",
+    "company_name": "Alfred_Wegner_Institute",
+    "agency_id": "61ed701a436aea9a5729fb34",
+    "agency_name": "INTERREXnew",
+    "sim_type": 0,
+    "mac": "c0:1c:00:00:06:e0",
+    "today_env": 0,
+    "today_gps": 0,
+    "today_beh": 0,
+    "survive": 0,
+    "register_time": "2025-11-25T01:44:23.104Z",
+    "status_device": {
+      "battery_voltage": 3.999,
+      "battery_power": 0,
+      "temperature": 10.9,
+      "signal_strength": 0,
+      "updated_at": "2025-12-04T13:37:17.263Z"
+    },
+    "status_env": {
+      "battery_voltage": 3.999,
+      "battery_power": 0,
+      "temperature": 10.9,
+      "humidity": 0,
+      "light": 2239,
+      "pressure": 26178,
+      "timestamp": "2025-12-04T10:00:39Z"
+    },
+    "status_gps": {
+      "altitude": 0,
+      "used_star": 0,
+      "dimension": 0,
+      "speed": 0,
+      "horizontal": 0,
+      "vertical": 0,
+      "course": 0,
+      "point_location": 0,
+      "longitude": -55.2758848,
+      "latitude": -61.9091328,
+      "timestamp": "2025-12-04T12:00:39Z"
+    },
+    "status_location": {
+      "longitude": -55.2758848,
+      "latitude": -61.9091328,
+      "timestamp": "2025-12-04T12:00:39Z",
+      "point_location": 0,
+      "gps_position": {
+        "argos": {
+          "longitude": -55.2758848,
+          "latitude": -61.9091328,
+          "altitude": 0,
+          "point_location": 0,
+          "timestamp": "2025-12-04T12:00:39Z",
+          "updated_at": "2025-12-04T13:37:19.229Z"
+        },
+        "gps": {
+          "altitude": 51.7,
+          "used_star": 5,
+          "dimension": 2,
+          "speed": 0,
+          "horizontal": -99999.9,
+          "vertical": -99999.9,
+          "course": 0,
+          "point_location": 1,
+          "longitude": 120.730048,
+          "latitude": 30.5351776,
+          "timestamp": "2025-10-27T02:00:10Z",
+          "updated_at": "2025-10-27T02:08:55.345Z"
+        }
+      }
+    },
+    "gps_timestamp": "2025-12-04T12:00:39Z",
+    "env_timestamp": "2025-10-30T07:00:01Z",
+    "beh_timestamp": "2025-10-28T04:50:03Z",
+    "sms": 0,
+    "setting_time": "2025-10-31T06:03:50.738Z",
+    "parameter_time": "2025-11-05T02:06:35.133Z",
+    "third_ref": {
+      "collection": "argos",
+      "id": "69098fef448200353a4c0287",
+      "database": "druid"
+    },
+    "work_mode": 3,
+    "inventory_status": 10,
+    "device_event_status": {
+      "event_id": "692bbcb886c78e7c78cd837e",
+      "timestamp": "2025-11-27T23:10:04.212Z",
+      "firmware_version": 1008,
+      "battery_voltage": 4.112,
+      "work_mode": 3,
+      "status": 1,
+      "signal_strength": -70
+    },
+    "encryption_status": {
+      "device_key_issued": 0,
+      "supported": 0,
+      "mode": 0
+    },
+    "read_at": "2025-12-02T11:50:05.297Z",
+    "product_lite": {
+      "id": "6853e25e27fbc388b242c97b",
+      "origin_series": "YAWL",
+      "origin_series_child": "Argos C4 Max S 550",
+      "series": "YAWL",
+      "series_child": "Argos C4 Max S 550",
+      "module_categories": [
+        5,
+        4,
+        15
+      ],
+      "device_categories": [
+        0,
+        10
+      ],
+      "power_level": 3,
+      "sensor": [
+        4,
+        8,
+        3
+      ]
+    },
+    "inventory_rssi": 0,
+    "subscribed": false,
+    "in_cluster": 0
+  },
+  {
+    "id": "68f5e8dac3d77b735bd570f3",
+    "uuid": "1c000006e3",
+    "sn": "1c000006e3",
+    "device_type": 7168,
+    "hardware_version": 16977,
+    "firmware_version": 1008,
+    "fitting_version": 18,
+    "bootloader_version": 0,
+    "firmware_info": {
+      "version": 1008,
+      "code_hash": 95776692,
+      "build_time": 1760146066,
+      "bootloader_version": 1001
+    },
+    "updated_at": "2025-12-04T14:36:44.927Z",
+    "work_mode_timestamp": "2025-11-27T13:09:08Z",
+    "company_id": "654245cc40d27b238307331a",
+    "company_name": "Alfred_Wegner_Institute",
+    "agency_id": "61ed701a436aea9a5729fb34",
+    "agency_name": "INTERREXnew",
+    "sim_type": 0,
+    "mac": "c0:1c:00:00:06:e3",
+    "today_env": 0,
+    "today_gps": 0,
+    "today_beh": 0,
+    "survive": 0,
+    "register_time": "2025-11-25T01:44:23.185Z",
+    "status_device": {
+      "battery_voltage": 3.997,
+      "battery_power": 0,
+      "temperature": -1.1,
+      "signal_strength": 0,
+      "updated_at": "2025-12-04T13:37:22.275Z"
+    },
+    "status_env": {
+      "battery_voltage": 3.997,
+      "battery_power": 0,
+      "temperature": -1.1,
+      "humidity": 0,
+      "light": 279,
+      "pressure": 32154,
+      "timestamp": "2025-12-04T12:50:49Z"
+    },
+    "status_gps": {
+      "altitude": 21,
+      "used_star": 0,
+      "dimension": 0,
+      "speed": 0,
+      "horizontal": 0,
+      "vertical": 0,
+      "course": 0,
+      "point_location": 0,
+      "longitude": -55.3310336,
+      "latitude": -63.5947968,
+      "timestamp": "2025-12-04T12:10:45Z"
+    },
+    "status_location": {
+      "longitude": -55.3310336,
+      "latitude": -63.5947968,
+      "timestamp": "2025-12-04T12:10:45Z",
+      "point_location": 0,
+      "gps_position": {
+        "argos": {
+          "longitude": -55.3310336,
+          "latitude": -63.5947968,
+          "altitude": 21,
+          "point_location": 0,
+          "timestamp": "2025-12-04T12:10:45Z",
+          "updated_at": "2025-12-04T14:36:44.927Z"
+        },
+        "gps": {
+          "altitude": 24.2,
+          "used_star": 6,
+          "dimension": 2,
+          "speed": 0,
+          "horizontal": -99999.9,
+          "vertical": -99999.9,
+          "course": 0,
+          "point_location": 1,
+          "longitude": 120.7300864,
+          "latitude": 30.5352,
+          "timestamp": "2025-10-27T02:00:02Z",
+          "updated_at": "2025-10-27T02:08:34.049Z"
+        }
+      }
+    },
+    "gps_timestamp": "2025-12-04T12:10:45Z",
+    "env_timestamp": "2025-10-30T07:00:01Z",
+    "beh_timestamp": "2025-10-28T04:40:03Z",
+    "sms": 0,
+    "setting_time": "2025-10-31T06:03:50.883Z",
+    "parameter_time": "2025-10-31T06:04:04.506Z",
+    "third_ref": {
+      "collection": "argos",
+      "id": "69098ff0448200353a4c0289",
+      "database": "druid"
+    },
+    "work_mode": 3,
+    "inventory_status": 10,
+    "device_event_status": {
+      "event_id": "692bbcb886c78e7c78cd8387",
+      "timestamp": "2025-11-27T18:52:28.587Z",
+      "firmware_version": 1008,
+      "battery_voltage": 4.144,
+      "work_mode": 3,
+      "status": 1,
+      "signal_strength": -70
+    },
+    "encryption_status": {
+      "device_key_issued": 0,
+      "supported": 0,
+      "mode": 0
+    },
+    "read_at": "2025-12-03T18:28:03.886Z",
+    "product_lite": {
+      "id": "6853e25e27fbc388b242c97b",
+      "origin_series": "YAWL",
+      "origin_series_child": "Argos C4 Max S 550",
+      "series": "YAWL",
+      "series_child": "Argos C4 Max S 550",
+      "module_categories": [
+        5,
+        4,
+        15
+      ],
+      "device_categories": [
+        0,
+        10
+      ],
+      "power_level": 3,
+      "sensor": [
+        4,
+        8,
+        3
+      ]
+    },
+    "inventory_rssi": 0,
+    "subscribed": false,
+    "in_cluster": 0
+  },
+  {
+    "id": "68f5e8dac3d77b735bd57137",
+    "uuid": "1c000006e5",
+    "sn": "1c000006e5",
+    "device_type": 7168,
+    "hardware_version": 16977,
+    "firmware_version": 1008,
+    "fitting_version": 18,
+    "bootloader_version": 0,
+    "firmware_info": {
+      "version": 1008,
+      "code_hash": 95776692,
+      "build_time": 1760146066,
+      "bootloader_version": 1001
+    },
+    "updated_at": "2025-12-02T16:36:08.285Z",
+    "work_mode_timestamp": "2025-11-27T22:40:50Z",
+    "company_id": "654245cc40d27b238307331a",
+    "company_name": "Alfred_Wegner_Institute",
+    "agency_id": "61ed701a436aea9a5729fb34",
+    "agency_name": "INTERREXnew",
+    "sim_type": 0,
+    "mac": "c0:1c:00:00:06:e5",
+    "today_env": 0,
+    "today_gps": 0,
+    "today_beh": 0,
+    "survive": 0,
+    "register_time": "2025-11-25T01:44:23.273Z",
+    "status_device": {
+      "battery_voltage": 4.126,
+      "battery_power": 0,
+      "temperature": 6.4,
+      "signal_strength": 0,
+      "updated_at": "2025-12-02T16:36:08.285Z"
+    },
+    "status_env": {
+      "battery_voltage": 4.126,
+      "battery_power": 0,
+      "temperature": 6.4,
+      "humidity": 0,
+      "light": 3222,
+      "pressure": 8940,
+      "timestamp": "2025-12-02T11:00:59Z"
+    },
+    "status_gps": {
+      "altitude": 16,
+      "used_star": 0,
+      "dimension": 0,
+      "speed": 0,
+      "horizontal": 0,
+      "vertical": 0,
+      "course": 0,
+      "point_location": 0,
+      "longitude": -54.9022464,
+      "latitude": -63.3833152,
+      "timestamp": "2025-12-02T11:00:49Z"
+    },
+    "status_location": {
+      "longitude": -54.9022464,
+      "latitude": -63.3833152,
+      "timestamp": "2025-12-02T11:00:49Z",
+      "point_location": 0,
+      "gps_position": {
+        "argos": {
+          "longitude": -54.9022464,
+          "latitude": -63.3833152,
+          "altitude": 16,
+          "point_location": 0,
+          "timestamp": "2025-12-02T11:00:49Z",
+          "updated_at": "2025-12-02T14:36:32.566Z"
+        },
+        "gps": {
+          "altitude": 38.7,
+          "used_star": 8,
+          "dimension": 2,
+          "speed": 0,
+          "horizontal": -99999.9,
+          "vertical": -99999.9,
+          "course": 0,
+          "point_location": 1,
+          "longitude": 120.7300992,
+          "latitude": 30.5352032,
+          "timestamp": "2025-10-27T02:00:31Z",
+          "updated_at": "2025-10-27T02:08:22.648Z"
+        }
+      }
+    },
+    "gps_timestamp": "2025-12-02T11:00:49Z",
+    "env_timestamp": "2025-10-30T07:00:01Z",
+    "beh_timestamp": "2025-10-28T04:40:02Z",
+    "sms": 0,
+    "setting_time": "2025-10-31T06:03:51.058Z",
+    "parameter_time": "2025-11-05T02:07:19.115Z",
+    "third_ref": {
+      "collection": "argos",
+      "id": "69098ff2448200353a4c028c",
+      "database": "druid"
+    },
+    "work_mode": 3,
+    "inventory_status": 10,
+    "device_event_status": {
+      "event_id": "692bbcb886c78e7c78cd8381",
+      "timestamp": "2025-11-27T22:40:51.425Z",
+      "firmware_version": 1008,
+      "battery_voltage": 4.11,
+      "work_mode": 3,
+      "status": 1,
+      "signal_strength": -73
+    },
+    "encryption_status": {
+      "device_key_issued": 0,
+      "supported": 0,
+      "mode": 0
+    },
+    "read_at": "2025-12-03T12:03:44.848Z",
+    "product_lite": {
+      "id": "6853e25e27fbc388b242c97b",
+      "origin_series": "YAWL",
+      "origin_series_child": "Argos C4 Max S 550",
+      "series": "YAWL",
+      "series_child": "Argos C4 Max S 550",
+      "module_categories": [
+        5,
+        4,
+        15
+      ],
+      "device_categories": [
+        0,
+        10
+      ],
+      "power_level": 3,
+      "sensor": [
+        4,
+        8,
+        3
+      ]
+    },
+    "inventory_rssi": 0,
+    "subscribed": false,
+    "in_cluster": 0
+  },
+  {
+    "id": "68f5e8dac3d77b735bd5717b",
+    "uuid": "1c000006e6",
+    "sn": "1c000006e6",
+    "device_type": 7168,
+    "hardware_version": 16977,
+    "firmware_version": 1008,
+    "fitting_version": 18,
+    "bootloader_version": 0,
+    "firmware_info": {
+      "version": 1008,
+      "code_hash": 95776692,
+      "build_time": 1760146066,
+      "bootloader_version": 1001
+    },
+    "updated_at": "2025-12-04T13:37:35.639Z",
+    "work_mode_timestamp": "2025-11-27T22:57:40Z",
+    "company_id": "654245cc40d27b238307331a",
+    "company_name": "Alfred_Wegner_Institute",
+    "agency_id": "61ed701a436aea9a5729fb34",
+    "agency_name": "INTERREXnew",
+    "sim_type": 0,
+    "mac": "c0:1c:00:00:06:e6",
+    "today_env": 0,
+    "today_gps": 0,
+    "today_beh": 0,
+    "survive": 0,
+    "register_time": "2025-11-25T01:44:23.349Z",
+    "status_device": {
+      "battery_voltage": 3.973,
+      "battery_power": 0,
+      "temperature": -0.2,
+      "signal_strength": 0,
+      "updated_at": "2025-12-04T13:37:34.26Z"
+    },
+    "status_env": {
+      "battery_voltage": 3.973,
+      "battery_power": 0,
+      "temperature": -0.2,
+      "humidity": 0,
+      "light": 3150,
+      "pressure": 24863,
+      "timestamp": "2025-12-04T11:50:13Z"
+    },
+    "status_gps": {
+      "altitude": 17,
+      "used_star": 0,
+      "dimension": 0,
+      "speed": 0,
+      "horizontal": 0,
+      "vertical": 0,
+      "course": 0,
+      "point_location": 0,
+      "longitude": -55.0493056,
+      "latitude": -63.3601024,
+      "timestamp": "2025-12-04T12:20:23Z"
+    },
+    "status_location": {
+      "longitude": -55.0493056,
+      "latitude": -63.3601024,
+      "timestamp": "2025-12-04T12:20:23Z",
+      "point_location": 0,
+      "gps_position": {
+        "argos": {
+          "longitude": -55.0493056,
+          "latitude": -63.3601024,
+          "altitude": 17,
+          "point_location": 0,
+          "timestamp": "2025-12-04T12:20:23Z",
+          "updated_at": "2025-12-04T13:37:35.639Z"
+        },
+        "gps": {
+          "altitude": 40.6,
+          "used_star": 5,
+          "dimension": 2,
+          "speed": 0,
+          "horizontal": -99999.9,
+          "vertical": -99999.9,
+          "course": 0,
+          "point_location": 1,
+          "longitude": 120.7300736,
+          "latitude": 30.5352224,
+          "timestamp": "2025-10-27T02:00:31Z",
+          "updated_at": "2025-10-27T02:08:16.706Z"
+        }
+      },
+      "assisted_position": {
+        "annotation": {
+          "longitude": -58.67281962186099,
+          "latitude": -62.230971790969036,
+          "altitude": 0,
+          "deviation": 0,
+          "point_location": 0,
+          "timestamp": "2025-11-25T10:32:24Z"
+        }
+      }
+    },
+    "gps_timestamp": "2025-12-04T12:20:23Z",
+    "env_timestamp": "2025-10-30T07:00:01Z",
+    "beh_timestamp": "2025-10-28T04:30:01Z",
+    "sms": 0,
+    "setting_time": "2025-11-26T17:55:50.733Z",
+    "parameter_time": "2025-11-05T02:08:21.969Z",
+    "third_ref": {
+      "collection": "argos",
+      "id": "69098ff3448200353a4c028f",
+      "database": "druid"
+    },
+    "work_mode": 3,
+    "inventory_status": 10,
+    "device_event_status": {
+      "event_id": "692bbcb886c78e7c78cd8380",
+      "timestamp": "2025-11-27T22:57:42.502Z",
+      "firmware_version": 1008,
+      "battery_voltage": 4.115,
+      "work_mode": 3,
+      "status": 1,
+      "signal_strength": -78
+    },
+    "encryption_status": {
+      "device_key_issued": 0,
+      "supported": 0,
+      "mode": 0
+    },
+    "read_at": "2025-12-02T21:54:35.727Z",
+    "product_lite": {
+      "id": "6853e25e27fbc388b242c97b",
+      "origin_series": "YAWL",
+      "origin_series_child": "Argos C4 Max S 550",
+      "series": "YAWL",
+      "series_child": "Argos C4 Max S 550",
+      "module_categories": [
+        5,
+        4,
+        15
+      ],
+      "device_categories": [
+        0,
+        10
+      ],
+      "power_level": 2,
+      "sensor": [
+        4,
+        8,
+        3
+      ]
+    },
+    "inventory_rssi": 0,
+    "subscribed": false,
+    "in_cluster": 0
+  },
+  {
+    "id": "68f5e8dac3d77b735bd571bf",
+    "uuid": "1c000006e8",
+    "sn": "1c000006e8",
+    "device_type": 7168,
+    "hardware_version": 16977,
+    "firmware_version": 1008,
+    "fitting_version": 18,
+    "bootloader_version": 0,
+    "firmware_info": {
+      "version": 1008,
+      "code_hash": 95776692,
+      "build_time": 1760146066,
+      "bootloader_version": 1001
+    },
+    "updated_at": "2025-12-04T13:37:33.318Z",
+    "work_mode_timestamp": "2025-11-27T22:29:29Z",
+    "company_id": "654245cc40d27b238307331a",
+    "company_name": "Alfred_Wegner_Institute",
+    "agency_id": "61ed701a436aea9a5729fb34",
+    "agency_name": "INTERREXnew",
+    "sim_type": 0,
+    "mac": "c0:1c:00:00:06:e8",
+    "today_env": 0,
+    "today_gps": 0,
+    "today_beh": 0,
+    "survive": 0,
+    "register_time": "2025-11-25T01:44:23.423Z",
+    "status_device": {
+      "battery_voltage": 4.071,
+      "battery_power": 0,
+      "temperature": -0.8,
+      "signal_strength": 0,
+      "updated_at": "2025-12-04T11:34:22.066Z"
+    },
+    "status_env": {
+      "battery_voltage": 4.071,
+      "battery_power": 0,
+      "temperature": -0.8,
+      "humidity": 0,
+      "light": 3366,
+      "pressure": 24259,
+      "timestamp": "2025-12-04T09:50:31Z"
+    },
+    "status_gps": {
+      "altitude": 9,
+      "used_star": 0,
+      "dimension": 0,
+      "speed": 0,
+      "horizontal": 0,
+      "vertical": 0,
+      "course": 0,
+      "point_location": 0,
+      "longitude": -54.924704,
+      "latitude": -63.3875904,
+      "timestamp": "2025-12-04T09:30:41Z"
+    },
+    "status_location": {
+      "longitude": -54.924704,
+      "latitude": -63.3875904,
+      "timestamp": "2025-12-04T09:30:41Z",
+      "point_location": 0,
+      "gps_position": {
+        "argos": {
+          "longitude": -54.924704,
+          "latitude": -63.3875904,
+          "altitude": 9,
+          "point_location": 0,
+          "timestamp": "2025-12-04T09:30:41Z",
+          "updated_at": "2025-12-04T13:37:33.318Z"
+        },
+        "gps": {
+          "altitude": 32.1,
+          "used_star": 7,
+          "dimension": 2,
+          "speed": 0,
+          "horizontal": -99999.9,
+          "vertical": -99999.9,
+          "course": 0,
+          "point_location": 1,
+          "longitude": 120.7300992,
+          "latitude": 30.5352128,
+          "timestamp": "2025-10-27T02:00:39Z",
+          "updated_at": "2025-10-27T02:08:28.789Z"
+        }
+      }
+    },
+    "gps_timestamp": "2025-12-04T09:30:41Z",
+    "env_timestamp": "2025-11-27T22:29:16Z",
+    "beh_timestamp": "2025-10-28T04:40:00Z",
+    "sms": 0,
+    "setting_time": "2025-11-27T13:04:09.553Z",
+    "parameter_time": "2025-11-05T02:08:35.962Z",
+    "third_ref": {
+      "collection": "argos",
+      "id": "69098ff2448200353a4c028d",
+      "database": "druid"
+    },
+    "work_mode": 3,
+    "inventory_status": 10,
+    "device_event_status": {
+      "event_id": "692bbcb886c78e7c78cd8383",
+      "timestamp": "2025-11-27T22:29:27.578Z",
+      "firmware_version": 1008,
+      "battery_voltage": 4.109,
+      "work_mode": 3,
+      "status": 1,
+      "signal_strength": -74
+    },
+    "encryption_status": {
+      "device_key_issued": 0,
+      "supported": 0,
+      "mode": 0
+    },
+    "read_at": "2025-12-03T00:18:02.336Z",
+    "product_lite": {
+      "id": "6853e25e27fbc388b242c97b",
+      "origin_series": "YAWL",
+      "origin_series_child": "Argos C4 Max S 550",
+      "series": "YAWL",
+      "series_child": "Argos C4 Max S 550",
+      "module_categories": [
+        5,
+        4,
+        15
+      ],
+      "device_categories": [
+        0,
+        10
+      ],
+      "power_level": 3,
+      "sensor": [
+        4,
+        8,
+        3
+      ]
+    },
+    "inventory_rssi": 0,
+    "subscribed": false,
+    "in_cluster": 0
+  },
+  {
+    "id": "68f5e8dac3d77b735bd57203",
+    "uuid": "1c000006e9",
+    "sn": "1c000006e9",
+    "device_type": 7168,
+    "hardware_version": 16977,
+    "firmware_version": 1008,
+    "fitting_version": 18,
+    "bootloader_version": 0,
+    "firmware_info": {
+      "version": 1008,
+      "code_hash": 95776692,
+      "build_time": 1760146066,
+      "bootloader_version": 1001
+    },
+    "updated_at": "2025-12-04T14:36:51.199Z",
+    "work_mode_timestamp": "2025-11-27T13:07:19Z",
+    "company_id": "654245cc40d27b238307331a",
+    "company_name": "Alfred_Wegner_Institute",
+    "agency_id": "61ed701a436aea9a5729fb34",
+    "agency_name": "INTERREXnew",
+    "sim_type": 0,
+    "mac": "c0:1c:00:00:06:e9",
+    "today_env": 0,
+    "today_gps": 0,
+    "today_beh": 0,
+    "survive": 0,
+    "register_time": "2025-11-25T01:44:23.497Z",
+    "status_device": {
+      "battery_voltage": 4.1,
+      "battery_power": 0,
+      "temperature": 9.2,
+      "signal_strength": 0,
+      "updated_at": "2025-12-04T14:36:47.371Z"
+    },
+    "status_env": {
+      "battery_voltage": 4.1,
+      "battery_power": 0,
+      "temperature": 9.2,
+      "humidity": 0,
+      "light": 2145,
+      "pressure": 27707,
+      "timestamp": "2025-12-04T13:00:05Z"
+    },
+    "status_gps": {
+      "altitude": 3,
+      "used_star": 0,
+      "dimension": 0,
+      "speed": 0,
+      "horizontal": 0,
+      "vertical": 0,
+      "course": 0,
+      "point_location": 0,
+      "longitude": -54.9024384,
+      "latitude": -63.3833984,
+      "timestamp": "2025-12-04T12:21:05Z"
+    },
+    "status_location": {
+      "longitude": -54.9024384,
+      "latitude": -63.3833984,
+      "timestamp": "2025-12-04T12:21:05Z",
+      "point_location": 0,
+      "gps_position": {
+        "argos": {
+          "longitude": -54.9024384,
+          "latitude": -63.3833984,
+          "altitude": 3,
+          "point_location": 0,
+          "timestamp": "2025-12-04T12:21:05Z",
+          "updated_at": "2025-12-04T14:36:51.199Z"
+        },
+        "gps": {
+          "altitude": 36.9,
+          "used_star": 11,
+          "dimension": 2,
+          "speed": 0,
+          "horizontal": -99999.9,
+          "vertical": -99999.9,
+          "course": 0,
+          "point_location": 1,
+          "longitude": 120.7300992,
+          "latitude": 30.5352352,
+          "timestamp": "2025-10-27T02:00:37Z",
+          "updated_at": "2025-10-27T02:08:44.231Z"
+        }
+      }
+    },
+    "gps_timestamp": "2025-12-04T12:21:05Z",
+    "env_timestamp": "2025-10-30T07:00:01Z",
+    "beh_timestamp": "2025-10-28T04:40:03Z",
+    "sms": 0,
+    "setting_time": "2025-10-31T06:03:51.494Z",
+    "parameter_time": "2025-10-31T06:04:05.094Z",
+    "third_ref": {
+      "collection": "argos",
+      "id": "69098ff1448200353a4c028b",
+      "database": "druid"
+    },
+    "work_mode": 3,
+    "inventory_status": 10,
+    "device_event_status": {
+      "event_id": "692bbcb886c78e7c78cd838a",
+      "timestamp": "2025-11-27T15:07:42.152Z",
+      "firmware_version": 1008,
+      "battery_voltage": 4.118,
+      "work_mode": 3,
+      "status": 1,
+      "signal_strength": -64
+    },
+    "encryption_status": {
+      "device_key_issued": 0,
+      "supported": 0,
+      "mode": 0
+    },
+    "read_at": "2025-12-03T00:18:47.011Z",
+    "product_lite": {
+      "id": "6853e25e27fbc388b242c97b",
+      "origin_series": "YAWL",
+      "origin_series_child": "Argos C4 Max S 550",
+      "series": "YAWL",
+      "series_child": "Argos C4 Max S 550",
+      "module_categories": [
+        5,
+        4,
+        15
+      ],
+      "device_categories": [
+        0,
+        10
+      ],
+      "power_level": 3,
+      "sensor": [
+        4,
+        8,
+        3
+      ]
+    },
+    "inventory_rssi": 0,
+    "subscribed": false,
+    "in_cluster": 0
+  },
+  {
+    "id": "68f5e8dac3d77b735bd57247",
+    "uuid": "1c000006eb",
+    "sn": "1c000006eb",
+    "device_type": 7168,
+    "hardware_version": 16977,
+    "firmware_version": 1008,
+    "fitting_version": 18,
+    "bootloader_version": 0,
+    "firmware_info": {
+      "version": 1008,
+      "code_hash": 95776692,
+      "build_time": 1760146066,
+      "bootloader_version": 1001
+    },
+    "updated_at": "2025-12-04T14:36:43.058Z",
+    "work_mode_timestamp": "2025-11-27T18:40:03Z",
+    "company_id": "654245cc40d27b238307331a",
+    "company_name": "Alfred_Wegner_Institute",
+    "agency_id": "61ed701a436aea9a5729fb34",
+    "agency_name": "INTERREXnew",
+    "sim_type": 0,
+    "mac": "c0:1c:00:00:06:eb",
+    "today_env": 0,
+    "today_gps": 0,
+    "today_beh": 0,
+    "survive": 0,
+    "register_time": "2025-11-25T01:44:23.652Z",
+    "status_device": {
+      "battery_voltage": 4.107,
+      "battery_power": 0,
+      "temperature": 7.4,
+      "signal_strength": 0,
+      "updated_at": "2025-12-04T14:36:38.942Z"
+    },
+    "status_env": {
+      "battery_voltage": 4.107,
+      "battery_power": 0,
+      "temperature": 7.4,
+      "humidity": 0,
+      "light": 5724,
+      "pressure": 33151,
+      "timestamp": "2025-12-04T12:31:02Z"
+    },
+    "status_gps": {
+      "altitude": 50,
+      "used_star": 0,
+      "dimension": 0,
+      "speed": 0,
+      "horizontal": 0,
+      "vertical": 0,
+      "course": 0,
+      "point_location": 0,
+      "longitude": -54.9107264,
+      "latitude": -63.384704,
+      "timestamp": "2025-12-04T12:51:02Z"
+    },
+    "status_location": {
+      "longitude": -54.9107264,
+      "latitude": -63.384704,
+      "timestamp": "2025-12-04T12:51:02Z",
+      "point_location": 0,
+      "gps_position": {
+        "argos": {
+          "longitude": -54.9107264,
+          "latitude": -63.384704,
+          "altitude": 50,
+          "point_location": 0,
+          "timestamp": "2025-12-04T12:51:02Z",
+          "updated_at": "2025-12-04T14:36:43.058Z"
+        },
+        "gps": {
+          "altitude": 30.6,
+          "used_star": 8,
+          "dimension": 2,
+          "speed": 0,
+          "horizontal": -99999.9,
+          "vertical": -99999.9,
+          "course": 0,
+          "point_location": 1,
+          "longitude": 120.730112,
+          "latitude": 30.5352096,
+          "timestamp": "2025-10-27T02:00:30.01Z",
+          "updated_at": "2025-10-27T02:08:49.278Z"
+        }
+      }
+    },
+    "gps_timestamp": "2025-12-04T12:51:02Z",
+    "env_timestamp": "2025-10-30T07:00:01Z",
+    "beh_timestamp": "2025-10-27T02:00:00Z",
+    "sms": 0,
+    "setting_time": "2025-11-27T13:05:35.032Z",
+    "parameter_time": "2025-11-05T02:09:23.537Z",
+    "third_ref": {
+      "collection": "argos",
+      "id": "69098ff0448200353a4c0288",
+      "database": "druid"
+    },
+    "work_mode": 3,
+    "inventory_status": 10,
+    "device_event_status": {
+      "event_id": "692bbcb886c78e7c78cd8388",
+      "timestamp": "2025-11-27T18:40:03.019Z",
+      "firmware_version": 1008,
+      "battery_voltage": 4.113,
+      "work_mode": 3,
+      "status": 1,
+      "signal_strength": -60
+    },
+    "encryption_status": {
+      "device_key_issued": 0,
+      "supported": 0,
+      "mode": 0
+    },
+    "read_at": "2025-12-03T00:18:16.277Z",
+    "product_lite": {
+      "id": "6853e25e27fbc388b242c97b",
+      "origin_series": "YAWL",
+      "origin_series_child": "Argos C4 Max S 550",
+      "series": "YAWL",
+      "series_child": "Argos C4 Max S 550",
+      "module_categories": [
+        5,
+        4,
+        15
+      ],
+      "device_categories": [
+        0,
+        10
+      ],
+      "power_level": 3,
+      "sensor": [
+        4,
+        8,
+        3
+      ]
+    },
+    "inventory_rssi": 0,
+    "subscribed": false,
+    "in_cluster": 0
+  },
+  {
+    "id": "68f5e8dac3d77b735bd572cf",
+    "uuid": "1c000006ed",
+    "sn": "1c000006ed",
+    "device_type": 7168,
+    "hardware_version": 16977,
+    "firmware_version": 1008,
+    "fitting_version": 18,
+    "bootloader_version": 0,
+    "firmware_info": {
+      "version": 1008,
+      "code_hash": 95776692,
+      "build_time": 1760146066,
+      "bootloader_version": 1001
+    },
+    "updated_at": "2025-12-03T17:36:42.14Z",
+    "work_mode_timestamp": "2025-11-27T23:24:07Z",
+    "company_id": "654245cc40d27b238307331a",
+    "company_name": "Alfred_Wegner_Institute",
+    "agency_id": "61ed701a436aea9a5729fb34",
+    "agency_name": "INTERREXnew",
+    "sim_type": 0,
+    "mac": "c0:1c:00:00:06:ed",
+    "today_env": 0,
+    "today_gps": 0,
+    "today_beh": 0,
+    "survive": 0,
+    "register_time": "2025-11-25T01:44:23.73Z",
+    "status_device": {
+      "battery_voltage": 4.032,
+      "battery_power": 0,
+      "temperature": 9.9,
+      "signal_strength": 0,
+      "updated_at": "2025-12-03T15:35:50.206Z"
+    },
+    "status_env": {
+      "battery_voltage": 4.032,
+      "battery_power": 0,
+      "temperature": 9.9,
+      "humidity": 0,
+      "light": 10284,
+      "pressure": 29686,
+      "timestamp": "2025-12-03T14:00:55Z"
+    },
+    "status_gps": {
+      "altitude": 8,
+      "used_star": 0,
+      "dimension": 0,
+      "speed": 0,
+      "horizontal": 0,
+      "vertical": 0,
+      "course": 0,
+      "point_location": 0,
+      "longitude": -53.7590272,
+      "latitude": -62.9058048,
+      "timestamp": "2025-12-03T15:01:03Z"
+    },
+    "status_location": {
+      "longitude": -53.7590272,
+      "latitude": -62.9058048,
+      "timestamp": "2025-12-03T15:01:03Z",
+      "point_location": 0,
+      "gps_position": {
+        "argos": {
+          "longitude": -53.7590272,
+          "latitude": -62.9058048,
+          "altitude": 8,
+          "point_location": 0,
+          "timestamp": "2025-12-03T15:01:03Z",
+          "updated_at": "2025-12-03T17:36:42.14Z"
+        },
+        "gps": {
+          "altitude": 37,
+          "used_star": 6,
+          "dimension": 2,
+          "speed": 0.1,
+          "horizontal": -99999.9,
+          "vertical": -99999.9,
+          "course": 0,
+          "point_location": 1,
+          "longitude": 120.7300992,
+          "latitude": 30.5352128,
+          "timestamp": "2025-10-27T02:00:11Z",
+          "updated_at": "2025-10-27T02:09:01.223Z"
+        }
+      }
+    },
+    "gps_timestamp": "2025-12-03T15:01:03Z",
+    "env_timestamp": "2025-10-30T07:00:01Z",
+    "beh_timestamp": "2025-10-28T04:30:00Z",
+    "sms": 0,
+    "setting_time": "2025-10-31T06:03:51.789Z",
+    "parameter_time": "2025-11-05T02:09:36.731Z",
+    "third_ref": {
+      "collection": "argos",
+      "id": "69098ff3448200353a4c028e",
+      "database": "druid"
+    },
+    "work_mode": 3,
+    "inventory_status": 10,
+    "device_event_status": {
+      "event_id": "692bbcb886c78e7c78cd837c",
+      "timestamp": "2025-11-27T23:24:08.386Z",
+      "firmware_version": 1008,
+      "battery_voltage": 4.109,
+      "work_mode": 3,
+      "status": 1,
+      "signal_strength": -60
+    },
+    "encryption_status": {
+      "device_key_issued": 0,
+      "supported": 0,
+      "mode": 0
+    },
+    "read_at": "2025-12-03T18:27:40.311Z",
+    "product_lite": {
+      "id": "6853e25e27fbc388b242c97b",
+      "origin_series": "YAWL",
+      "origin_series_child": "Argos C4 Max S 550",
+      "series": "YAWL",
+      "series_child": "Argos C4 Max S 550",
+      "module_categories": [
+        5,
+        4,
+        15
+      ],
+      "device_categories": [
+        0,
+        10
+      ],
+      "power_level": 3,
+      "sensor": [
+        4,
+        8,
+        3
+      ]
+    },
+    "inventory_rssi": 0,
+    "subscribed": false,
+    "in_cluster": 0
+  },
+  {
+    "id": "68f5e8dbc3d77b735bd57313",
+    "uuid": "1c000006ee",
+    "sn": "1c000006ee",
+    "device_type": 7168,
+    "hardware_version": 16977,
+    "firmware_version": 1008,
+    "fitting_version": 18,
+    "bootloader_version": 0,
+    "firmware_info": {
+      "version": 1008,
+      "code_hash": 95776692,
+      "build_time": 1760146066,
+      "bootloader_version": 1001
+    },
+    "updated_at": "2025-12-04T14:36:44.94Z",
+    "work_mode_timestamp": "2025-11-27T23:37:32Z",
+    "company_id": "654245cc40d27b238307331a",
+    "company_name": "Alfred_Wegner_Institute",
+    "agency_id": "61ed701a436aea9a5729fb34",
+    "agency_name": "INTERREXnew",
+    "sim_type": 0,
+    "mac": "c0:1c:00:00:06:ee",
+    "today_env": 0,
+    "today_gps": 0,
+    "today_beh": 0,
+    "survive": 0,
+    "register_time": "2025-11-25T01:44:23.805Z",
+    "status_device": {
+      "battery_voltage": 4.074,
+      "battery_power": 0,
+      "temperature": 7.4,
+      "signal_strength": 0,
+      "updated_at": "2025-12-04T14:36:44.94Z"
+    },
+    "status_env": {
+      "battery_voltage": 4.074,
+      "battery_power": 0,
+      "temperature": 7.4,
+      "humidity": 0,
+      "light": 11610,
+      "pressure": 26779,
+      "timestamp": "2025-12-04T12:00:09Z"
+    },
+    "status_gps": {
+      "altitude": 4,
+      "used_star": 0,
+      "dimension": 0,
+      "speed": 0,
+      "horizontal": 0,
+      "vertical": 0,
+      "course": 0,
+      "point_location": 0,
+      "longitude": -54.9199936,
+      "latitude": -63.3139328,
+      "timestamp": "2025-12-04T12:00:09Z"
+    },
+    "status_location": {
+      "longitude": -54.9199936,
+      "latitude": -63.3139328,
+      "timestamp": "2025-12-04T12:00:09Z",
+      "point_location": 0,
+      "gps_position": {
+        "argos": {
+          "longitude": -54.9199936,
+          "latitude": -63.3139328,
+          "altitude": 4,
+          "point_location": 0,
+          "timestamp": "2025-12-04T12:00:09Z",
+          "updated_at": "2025-12-04T13:37:26.263Z"
+        },
+        "gps": {
+          "altitude": 33.3,
+          "used_star": 10,
+          "dimension": 2,
+          "speed": 0,
+          "horizontal": -99999.9,
+          "vertical": -99999.9,
+          "course": 0,
+          "point_location": 1,
+          "longitude": 120.7300736,
+          "latitude": 30.5352224,
+          "timestamp": "2025-10-27T02:00:39Z",
+          "updated_at": "2025-10-27T02:08:39.158Z"
+        }
+      }
+    },
+    "gps_timestamp": "2025-12-04T12:00:09Z",
+    "env_timestamp": "2025-10-30T07:00:01Z",
+    "beh_timestamp": "2025-10-28T04:40:00Z",
+    "sms": 0,
+    "setting_time": "2025-10-31T06:03:51.96Z",
+    "parameter_time": "2025-11-05T02:09:49.613Z",
+    "third_ref": {
+      "collection": "argos",
+      "id": "69098ff1448200353a4c028a",
+      "database": "druid"
+    },
+    "work_mode": 3,
+    "inventory_status": 10,
+    "device_event_status": {
+      "event_id": "692bbcb886c78e7c78cd837a",
+      "timestamp": "2025-11-27T23:37:33.214Z",
+      "firmware_version": 1008,
+      "battery_voltage": 4.112,
+      "work_mode": 3,
+      "status": 1,
+      "signal_strength": -101
+    },
+    "encryption_status": {
+      "device_key_issued": 0,
+      "supported": 0,
+      "mode": 0
+    },
+    "read_at": "2025-12-02T11:48:36.957Z",
+    "product_lite": {
+      "id": "6853e25e27fbc388b242c97b",
+      "origin_series": "YAWL",
+      "origin_series_child": "Argos C4 Max S 550",
+      "series": "YAWL",
+      "series_child": "Argos C4 Max S 550",
+      "module_categories": [
+        5,
+        4,
+        15
+      ],
+      "device_categories": [
+        0,
+        10
+      ],
+      "power_level": 3,
+      "sensor": [
+        4,
+        8,
+        3
+      ]
+    },
+    "inventory_rssi": 0,
+    "subscribed": false,
+    "in_cluster": 0
+  }
+]
