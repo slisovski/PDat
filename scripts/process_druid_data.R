@@ -27,46 +27,18 @@ if (length(files) == 0) {
 process_file <- function(f) {
   message("Reading ", f)
   
-  dat <- jsonlite::fromJSON(f, simplifyVector = TRUE)
-  
-  # Most Druid files have structure:
-  # $data$gps$data or $items$track$gps etc.
-  # We'll search for lat/lon automatically
-  
-  gps <- dat %>% 
-    jsonlite::flatten() %>%
-    purrr::pluck("data", "gps", "data", .default = NULL)
-  
-  if (is.null(gps)) {
-    gps <- dat %>% purrr::pluck("gps", "data", .default = NULL)
-  }
-  if (is.null(gps)) {
-    gps <- dat %>% purrr::pluck("track", "gps", .default = NULL)
-  }
-  
-  if (is.null(gps)) {
-    warning("No GPS data found in ", f)
-    return(NULL)
-  }
-  
-  gps <- as.data.frame(gps)
-  
-  # Add device UUID from filename
-  uuid <- stringr::str_extract(basename(f), "gps_raw_([a-z0-9]+)") %>%
-    stringr::str_remove("gps_raw_")
-  
-  gps$uuid <- uuid
+  dat <- jsonlite::fromJSON(f, simplifyVector = TRUE) %>%
+    dplyr::select(argos_id, timestamp, longitude, latitude, altitude)
   
   # Standardize fields
-  gps <- gps %>%
+  gps <- dat %>% as_tibble() %>%
     rename(
-      timestamp = time,
+      uuid = argos_id,
       lat = latitude,
       lon = longitude
     ) %>%
     mutate(
       timestamp = ymd_hms(timestamp, quiet = TRUE),
-      uuid = as.character(uuid)
     ) %>%
     arrange(timestamp)
   
