@@ -29,7 +29,7 @@ for d in [DATA_RAW, DATA_PROC, DATA_LATEST]:
 # AUTHENTICATION
 # -----------------------------
 def druid_login(username, password):
-    raw = f"{username}druid{password}heifeng"
+    raw = f"{username} + druid + {password} + heifeng"
     sha256pwd = hashlib.sha256(raw.encode()).hexdigest()
 
     url = f"{API_BASE}v2/login"

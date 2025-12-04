@@ -3,7 +3,7 @@ import os, hashlib, requests
 username = os.environ["DRUID_USERNAME"]
 password = os.environ["DRUID_PASSWORD"]
 
-raw = f"{username} + 'druid' + {password} + 'heifeng'"
+raw = f"{username} + druid + {password} + heifeng"
 sha = hashlib.sha256(raw.encode()).hexdigest()
 
 print("raw:", raw)
