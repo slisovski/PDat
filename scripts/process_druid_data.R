@@ -8,9 +8,9 @@ library(arrow)
 library(lubridate)
 
 # Define directories relative to repo
-repo_dir <- here::here()
-raw_dir  <- file.path(repo_dir, "data/raw_druid")
-latest_dir <- file.path(repo_dir, "data/latest_druid")
+repo_dir   <- here::here()
+raw_dir    <- file.path(repo_dir, "data/raw")
+latest_dir <- file.path(repo_dir, "data/latest")
 
 if (!dir.exists(latest_dir)) dir.create(latest_dir, recursive = TRUE)
 

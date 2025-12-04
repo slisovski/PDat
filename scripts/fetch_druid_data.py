@@ -3,17 +3,24 @@ import os
 import json
 import hashlib
 import requests
-from datetime import datetime
+from datetime import datetime, timezone
 import pandas as pd
 from pathlib import Path
 
-# -----------------------------
-# USER SETTINGS
-# -----------------------------
-UUID_LIST = [
-    "1c000006e6", "1c000006e8", "1c000006e9",
-    "1c000006ee", "1c000006e3", "1c000006eb",
-    "1c000006ed", "1c000006e0", "1c000006e5"
+# ---------------------------------------------------------
+# DEVICE IDS (correct Druid internal IDs)
+# ---------------------------------------------------------
+
+DEVICE_IDS = [
+    "68f5e8dac3d77b735bd5717b",   # 1c000006e6
+    "68f5e8dac3d77b735bd571bf",   # 1c000006e8
+    "68f5e8dac3d77b735bd57203",   # 1c000006e9
+    "68f5e8dbc3d77b735bd57313",   # 1c000006ee
+    "68f5e8dac3d77b735bd570f3",   # 1c000006e3
+    "68f5e8dac3d77b735bd57247",   # 1c000006eb
+    "68f5e8dac3d77b735bd572cf",   # 1c000006ed
+    "68f5e8dac3d77b735bd570af",   # 1c000006e0
+    "68f5e8dac3d77b735bd57137"    # 1c000006e5
 ]
 
 API_BASE = "https://www.ecotopiago.com/api/"
@@ -25,139 +32,115 @@ DATA_LATEST = Path("data/latest")
 for d in [DATA_RAW, DATA_PROC, DATA_LATEST]:
     d.mkdir(parents=True, exist_ok=True)
 
-# -----------------------------
-# AUTHENTICATION
-# -----------------------------
+
+# ---------------------------------------------------------
+# LOGIN
+# ---------------------------------------------------------
+
 def druid_login(username, password):
     raw = f"{username} + druid + {password} + heifeng"
-    sha256pwd = hashlib.sha256(raw.encode()).hexdigest()
+    sha = hashlib.sha256(raw.encode()).hexdigest()
 
-    url = f"{API_BASE}v2/login"
-    payload = {"username": username, "password": sha256pwd}
-
-    r = requests.post(url, json=payload)
+    r = requests.post(
+        f"{API_BASE}v2/login",
+        json={"username": username, "password": sha}
+    )
     r.raise_for_status()
 
     token = r.headers.get("x-druid-authentication")
     if not token:
-        raise RuntimeError("No authentication token returned from Druid.")
+        raise RuntimeError("No auth token returned.")
 
     return token
 
 
-# -----------------------------
-# GET DEVICE INFO (UUID → internal ID)
-# -----------------------------
-def fetch_device_info(token, uuid_list):
-    url = f"{API_BASE}v3/device/many"
-    headers = {"X-Druid-Authentication": token}
-    body = {"uuid": uuid_list}
+# ---------------------------------------------------------
+# FETCH ARGOS GNSS (paginated)
+# ---------------------------------------------------------
 
-    r = requests.post(url, json=body, headers=headers)
-    r.raise_for_status()
-    devices = r.json()
-
-    # map: uuid → device_id
-    uuid_to_id = {}
-    for d in devices:
-        if "uuid" in d:
-            uuid_to_id[d["uuid"]] = d["id"]
-    return uuid_to_id, devices
-
-
-# -----------------------------
-# FETCH ALL GPS DATA SINCE DEPLOYMENT
-# -----------------------------
-def fetch_all_gps(token, device_id):
-    url_base = f"{API_BASE}v2/gps/device/{device_id}/page/"
+def fetch_argos_gnss(token, device_id):
     headers = {
         "X-Druid-Authentication": token,
         "x-result-limit": "1000",
         "x-result-sort": "-timestamp"
     }
 
+    url_base = f"{API_BASE}v2/argos_location/device/{device_id}/page/"
+    cursor = ""  # empty = first page (most recent)
     all_records = []
-    param = ""   # empty → start from first record
 
     while True:
-        url = url_base + param
+        url = url_base + cursor
         r = requests.get(url, headers=headers)
-        if r.status_code == 401:
-            raise RuntimeError("Token expired during GPS fetch.")
         r.raise_for_status()
 
         chunk = r.json()
+
+        # empty list → finished
         if not chunk:
             break
 
         all_records.extend(chunk)
-        # new param = last timestamp in this chunk
-        last_timestamp = chunk[-1]["timestamp"]
-        param = last_timestamp
+
+        # next cursor = last timestamp
+        last_ts = chunk[-1]["timestamp"]
+        cursor = last_ts
 
     return all_records
 
 
-# -----------------------------
-# CLEAN GPS DATA → tidy table
-# -----------------------------
-def tidy_gps(raw_json):
-    if len(raw_json) == 0:
+# ---------------------------------------------------------
+# FORMAT DATA
+# ---------------------------------------------------------
+
+def tidy_records(raw_json, device_id):
+    if not raw_json:
         return pd.DataFrame()
 
     df = pd.json_normalize(raw_json)
+    df["device_id"] = device_id
 
-    # ensure timestamps are parsed
-    if "timestamp" in df:
-        df["timestamp"] = pd.to_datetime(df["timestamp"], errors="coerce")
-    if "updated_at" in df:
-        df["updated_at"] = pd.to_datetime(df["updated_at"], errors="coerce")
+    for col in ["timestamp", "satellite_timestamp", "updated_at"]:
+        if col in df.columns:
+            df[col] = pd.to_datetime(df[col], errors="coerce")
 
     return df
 
 
-# -----------------------------
-# MAIN EXECUTION
-# -----------------------------
+# ---------------------------------------------------------
+# MAIN
+# ---------------------------------------------------------
+
 def main():
     username = os.environ["DRUID_USERNAME"]
     password = os.environ["DRUID_PASSWORD"]
 
-    print("Logging in...")
+    print("🔑 Logging in...")
     token = druid_login(username, password)
+    print("✔ Login OK\n")
 
-    print("Fetching device metadata...")
-    uuid_to_id, device_info = fetch_device_info(token, UUID_LIST)
-
-    # Save metadata
-    with open(DATA_LATEST / "metadata.json", "w") as f:
-        json.dump(device_info, f, indent=2)
-
+    timestamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
     all_dfs = []
 
-    for uuid, dev_id in uuid_to_id.items():
-        print(f"Fetching GPS data for device {uuid} (id={dev_id})...")
+    for dev_id in DEVICE_IDS:
+        print(f"📡 Fetching Argos GNSS data for {dev_id}...")
+        raw = fetch_argos_gnss(token, dev_id)
 
-        raw_gps = fetch_all_gps(token, dev_id)
+        raw_file = DATA_RAW / f"argos_gnss_raw_{dev_id}_{timestamp}.json"
+        with open(raw_file, "w") as f:
+            json.dump(raw, f, indent=2)
 
-        # Save raw JSON
-        raw_path = DATA_RAW / f"gps_raw_{uuid}_{datetime.utcnow().strftime('%Y%m%dT%H%M%SZ')}.json"
-        with open(raw_path, "w") as f:
-            json.dump(raw_gps, f, indent=2)
-
-        # Tidy + save processed
-        df = tidy_gps(raw_gps)
-        proc_path = DATA_PROC / f"gps_processed_{uuid}.parquet"
-        df.to_parquet(proc_path, index=False)
+        df = tidy_records(raw, dev_id)
+        proc_file = DATA_PROC / f"argos_gnss_processed_{dev_id}.parquet"
+        df.to_parquet(proc_file, index=False)
 
         all_dfs.append(df)
+        print(f"   ↳ Records fetched: {len(df)}")
 
-    # Combine all devices
-    if all_dfs:
-        combined = pd.concat(all_dfs, ignore_index=True)
-        combined.to_parquet(DATA_LATEST / "gps_all_devices.parquet", index=False)
+    combined = pd.concat(all_dfs, ignore_index=True)
+    combined.to_parquet(DATA_LATEST / "argos_gnss_all_devices.parquet", index=False)
 
-    print("DONE ✔")
+    print("\n🎉 DONE — all Argos GNSS data updated successfully!")
 
 
 if __name__ == "__main__":
