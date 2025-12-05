@@ -7,6 +7,7 @@ library(readr)
 library(arrow)
 library(stringdist)
 library(lubridate)
+library(sf)
 
 # Define directories relative to repo
 repo_dir   <- here::here()
@@ -68,3 +69,51 @@ arrow::write_parquet(all_tracks, parquet_path)
 
 message("Written: ", csv_path)
 message("Written: ", parquet_path)
+
+
+### further processing
+
+druid_ids <- tibble(
+  argos_id = c(
+    "69098ff3448200353a4c028f",
+    "69098ff2448200353a4c028d",
+    "69098ff1448200353a4c028b",
+    "69098ff1448200353a4c028a",
+    "69098ff0448200353a4c0289",
+    "69098ff0448200353a4c0288",
+    "69098ff3448200353a4c028e",
+    "69098fef448200353a4c0287",
+    "69098ff2448200353a4c028c"
+  ),
+  uuid = c(
+    "06e6",
+    "06e8",
+    "06e9",
+    "06ee",
+    "06e3",
+    "06eb",
+    "06ed",
+    "06e0",
+    "06e5"
+  ),
+  species = c(
+    "Gentoo penguin",
+    "Gentoo penguin",
+    "Adélie penguin",
+    "Adélie penguin",
+    "Adélie penguin",
+    "Adélie penguin",
+    "Adélie penguin",
+    "Adélie penguin",
+    "Gentoo penguin"
+  )
+)
+
+tracks_sf <- all_tracks %>%
+  mutate(timestamp = as.POSIXct(timestamp)) %>%
+  filter(timestamp >= as.POSIXct("2025-11-27 23:00:58", tz = "UTC")) %>%
+  left_join(druid_ids) %>% st_as_sf(coords = c("longitude", "latitude"), crs = 4326)
+
+save(tracks_sf, file = paste0(latest_dir, "/track_sf.rds"))
+
+message("Written: ", paste0(latest_dir, "/track_sf.rds"))
