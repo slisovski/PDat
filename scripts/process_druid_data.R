@@ -114,6 +114,6 @@ tracks_sf <- all_tracks %>%
   filter(timestamp >= as.POSIXct("2025-11-27 23:00:58", tz = "UTC")) %>%
   left_join(druid_ids) %>% st_as_sf(coords = c("longitude", "latitude"), crs = 4326)
 
-save(tracks_sf, file = paste0(latest_dir, "/tracks_sf.rds"))
+saveRDS(tracks_sf, file = paste0(latest_dir, "/tracks_sf.rds"))
 
 message("Written: ", paste0(latest_dir, "/tracks_sf.rds"))
