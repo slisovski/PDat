@@ -37,7 +37,7 @@ jobs:
           DRUID_USERNAME: ${{ secrets.DRUID_USERNAME }}
           DRUID_PASSWORD: ${{ secrets.DRUID_PASSWORD }}
         run: |
-          python scripts/fetch_druid_all.py
+          python scripts/fetch_druid_data.py
 
       # -----------------------------
       # R SETUP
