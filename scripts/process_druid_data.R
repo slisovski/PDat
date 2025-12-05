@@ -86,15 +86,15 @@ druid_ids <- tibble(
     "69098ff2448200353a4c028c"
   ),
   uuid = c(
-    "06e6",
-    "06e8",
-    "06e9",
-    "06ee",
-    "06e3",
-    "06eb",
-    "06ed",
-    "06e0",
-    "06e5"
+    "c_06e6",
+    "o_06e8",
+    "l_06e9",
+    "d_06ee",
+    "w_06e3",
+    "a_06eb",
+    "t_06ed",
+    "e_06e0",
+    "r_06e5"
   ),
   species = c(
     "Gentoo penguin",
