@@ -23,7 +23,7 @@ files_gnss <- list.files(raw_dir, pattern = "\\.json$", full.names = TRUE)
 files_env  <- list.files(env_dir, pattern = "\\.json$", full.names = TRUE)
 
 
-if (length(files) == 0) {
+if (length(files_gnss) == 0) {
   stop("No raw Druid JSON files found.")
 }
 
