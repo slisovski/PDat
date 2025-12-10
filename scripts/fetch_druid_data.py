@@ -29,11 +29,11 @@ API_BASE = "https://www.ecotopiago.com/api/"
 # FOLDER STRUCTURE
 # ---------------------------------------------------------
 
-GNSS_RAW = Path("data/druid/gnss/raw")
+GNSS_RAW  = Path("data/druid/gnss/raw")
 GNSS_PROC = Path("data/druid/gnss/processed")
-ENV_RAW = Path("data/druid/env/raw")
-ENV_PROC = Path("data/druid/env/processed")
-LATEST = Path("data/druid/latest")
+ENV_RAW   = Path("data/druid/env/raw")
+ENV_PROC  = Path("data/druid/env/processed")
+LATEST    = Path("data/druid/latest")
 
 for d in [GNSS_RAW, GNSS_PROC, ENV_RAW, ENV_PROC, LATEST]:
     d.mkdir(parents=True, exist_ok=True)
@@ -171,7 +171,7 @@ def main():
     username = os.environ["DRUID_USERNAME"]
     password = os.environ["DRUID_PASSWORD"]
 
-    print("🔑 Logging in…")
+    print("Logging in…")
     token = druid_login(username, password)
     print("✔ Login OK\n")
 
